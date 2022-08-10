@@ -1,6 +1,9 @@
 #Environments
 .venv
 airflow/logs*
+airflow/logs/scheduler/latest
 airflow/airflow.cfg
 airflow/airflow.db
+airflow/airflow.db
 airflow/webserver_config.py
+airflow/dags/__pycache__
