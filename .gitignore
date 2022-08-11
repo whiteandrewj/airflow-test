@@ -1,7 +1,8 @@
 #Environments
 .venv
-airflow/logs/**
+airflow/logs/
 airflow.cfg
 airflow.db
 webserver_config.py
-airflow/dags/__pycache__
+airflow-webserver.pid
+airflow/dags/__pycache__/
