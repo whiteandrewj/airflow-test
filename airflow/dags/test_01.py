@@ -30,7 +30,7 @@ with DAG(
     },
     description='A simple tutorial DAG',
     schedule_interval=timedelta(days=1),
-    template_searchpath=['/home/ajwhite/projects/airflow-test/scripts'],
+#    template_searchpath=['/home/ajwhite/projects/airflow-test/scripts'],
     start_date=datetime(2021, 1, 1),
     catchup=False,
     tags=['example'],
@@ -39,7 +39,7 @@ with DAG(
     # t1, t2 and t3 are examples of tasks created by instantiating operators
     t1 = BashOperator(
         task_id='print_date',
-        bash_command='/home/ajwhite/projects/airflow-test/scripts/print_date.sh "08/10/2022 13:55"',
+        bash_command="/home/ajwhite/projects/airflow-test/scripts/print_date.sh \"$(date +'%m/%d/%Y %H:%M')\"",
     )
 
     t2 = BashOperator(
